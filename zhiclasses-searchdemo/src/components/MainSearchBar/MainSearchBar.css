@@ -1,0 +1,38 @@
+.mainSearch {
+  width: 60%;
+  height: 40px;
+  left: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
+.mainSearchText {
+  float:left;
+  display: inline-block;
+  font-size: 0.9rem;
+  height:100%;
+  width:75%;
+  border-radius: 4px 0 0 4px;
+  outline:none;/*去除蓝色边框*/
+  padding-left: 1rem;
+}
+
+.mainSearchButton {
+  float:left;
+  display: inline-block;
+  background: #330047;
+  color:#fff;
+  font-size: 0.9rem;
+  height:100%;
+  width:20%;
+  border:1px solid #330047;
+  border-radius: 0 3px 3px 0;
+  margin-left: 1%;
+  margin-top: 3px;
+}
+
+.mainSearchButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
