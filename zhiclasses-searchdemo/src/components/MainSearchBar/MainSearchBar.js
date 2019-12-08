@@ -1,5 +1,6 @@
 import React from 'react';
 import './MainSearchBar.css';
+import { Link } from 'react-router-dom';
 
 class MainSearchBar extends React.Component{
 	
@@ -13,12 +14,14 @@ class MainSearchBar extends React.Component{
 					placeholder="课程名、课程编号、教授名"
 					onChange={this.handleChange}
 		        />
-		        <input
-					type="submit"
-					value="搜  课"
-					className="mainSearchButton"
-					onClick={this.handleSubmit}
-		        />
+		        <Link to='\search'>
+			        <input
+						type="submit"
+						value="搜  课"
+						className="mainSearchButton"
+						onClick={this.handleSubmit}
+			        />
+		        </Link>
 	  		</div>
 		);
 	}
