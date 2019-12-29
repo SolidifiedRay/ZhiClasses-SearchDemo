@@ -4,32 +4,32 @@ import s from './SearchResultItem.css';
 class SearchResultItem extends React.Component{
 	
 	render(){
-		return (
+		return this.props.courses.map((course) => (
 			<div className="courseContent">
 				<ul>
 					<li>
 						<span className="courseInfo courseNum">
-							CS-UY 1134
+							{course.userId}
 						</span>
 					</li>
 					<li>
 						<span className="courseInfo courseName">
-							Data Structure and Algorithm
+							{course.id}
 						</span>
 					</li>
 					<li>
 						<span className="courseCom">
-							4
+							{course.title}
 						</span>
 					</li>
 					<li>
 						<span className="courseProNaame">
-							TBA
+							{course.completed}
 						</span>
 					</li>
 				</ul>
 			</div>
-		);
+		));
 	}
 }
 

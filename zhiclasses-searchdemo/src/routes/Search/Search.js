@@ -1,9 +1,19 @@
 import React from 'react';
 import s from './Search.css';
 import SearchResultItem from '../../components/SearchResultItem/SearchResultItem.js';
+import axios from 'axios'
 
 class Search extends React.Component{
-	
+	state = {
+		courses: [
+		]
+	}
+
+
+	componentDidMount(){
+		axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10').then(res => this.setState({ courses: res.data}))
+	}
+
 	render(){
 		return (
 			<div className="searchMiddleDiv">
@@ -27,7 +37,7 @@ class Search extends React.Component{
 							</li>
 						</ul>
 					</div>
-					<SearchResultItem/>
+					<SearchResultItem courses={this.state.courses}/>
 				</div>
 			</div>
 		);
